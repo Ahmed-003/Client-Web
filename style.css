@@ -528,7 +528,7 @@
     margin-bottom: 15px;
 }
 
-.main_title h2:before {
+/* .main_title h2:before {
     content: "";
     width: 45px;
     height: 1px;
@@ -536,7 +536,7 @@
     position: absolute;
     right: -60px;
     bottom: 7px;
-}
+} */
 
 .main_title p {
     font-size: 20px;

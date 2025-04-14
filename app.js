@@ -21,7 +21,7 @@ var swiper = new Swiper(".mySwiper", {
     },
 
     autoplay: {
-        delay: 3000,
+        delay: 8000,
         disableOnInteraction: false,
       },
     
@@ -32,26 +32,6 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 
-//   $('.owl-carousel').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     nav: true,           // 👈 This enables next/prev buttons
-//     dots: true, 
-//     responsive: {
-//       0: {
-//           items: 1,
-//       },
-//       430: {
-//           items: 2, 
-//       },
-//       768: {
-//           items: 3, 
-//       },
-//       992: {
-//           items: 4,
-//       }
-//     }
-// })
 
 $('.owl-carousel').owlCarousel({
   loop:true,
