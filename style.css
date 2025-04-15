@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 /* =======================Main Header Area==============================*/
 
 .main-header-area{
@@ -56,14 +57,14 @@
     display: inline-block;
     line-height: 50px;
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .pink-header-icon-4 a{
     display: inline-block;
     line-height: 50px;
     color: #fff;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .pink-header-icon-3 a i{
@@ -471,7 +472,7 @@
 
 @media screen and (max-width: 399px) {
     .slide-content{ 
-        font-size: 25px;
+        font-size: 27px;
         line-height: 35px;
         right: -3%;
     }
@@ -511,7 +512,6 @@
     height: 701px;
     width: 250px;
     z-index: -1;
-
 }
 
 .welcome_bakery_inner{
@@ -528,7 +528,7 @@
     margin-bottom: 15px;
 }
 
-/* .main_title h2:before {
+.main_title h2:before {
     content: "";
     width: 45px;
     height: 1px;
@@ -536,12 +536,12 @@
     position: absolute;
     right: -60px;
     bottom: 7px;
-} */
+}
 
 .main_title p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
-    font-family: "Lora", serif;
+    font-family: "Open Sans", sans-serif;
     color: #242424;
     margin-bottom: 0px;
 }
@@ -563,9 +563,18 @@
     position: relative;
 }
 
+.number {
+    font-weight: 600;
+    font-size: 44px;
+    color: #f195b2;
+    display: block;
+    line-height: 1;
+}
+
 .owl-carousel .item{
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
 }
 
 .owl-prev,  .owl-next {
@@ -576,7 +585,11 @@
     border: 2px solid #d0d0d0;
     text-align: center;
     line-height: 36px;
-    transition: all 400ms linear 0s;
+    transition: 0.3s;
+}
+
+.owl-prev{
+    margin-right: 9px;
 }
 
 .cake_feature_slider {
@@ -584,3 +597,192 @@
     right: 0px;
     top: -68px;
 }
+
+.owl-prev:hover,  .owl-next:hover {
+    background: #f195b2;
+    color: #fff;
+    border-color: #f195b2;
+    cursor: pointer;
+}
+
+.item img{
+    transition: 0.3s;
+    
+}
+
+.item img:hover{
+    transform: scale(1.05);
+}
+
+.welcome_bakery_inner{
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+@media screen and (max-width: 576px){
+    .Welcome-Section::before{
+        display: none;
+    }
+    
+    .Welcome-Section::after{
+        display: none;
+    }
+
+    .main_title h2:before {
+        display: none;
+    }
+
+    .main_title{
+        text-align: center;
+    }
+
+    .welcome_left_text{
+        text-align: center;
+    }
+
+    .main_title h2{
+        font-size: 26px;
+    }
+
+    .cake_feature_slider {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+}
+
+/* ==================== Our Cakes Section ====================== */
+
+.our_cakes_text{
+    text-align: center;
+}
+
+.our_cakes_text h2{
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #3e606b;
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.our_cakes_text h2:before{
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: #acb2b4;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+}
+
+.cake-filter{
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.list-style{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-style li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.list-style li a {
+    text-align: center;
+    font-size: 22px;
+    color: #3e606b;
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.list-style li a::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #f195b2;
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 400ms linear 0s;
+}
+
+.list-style li.active a:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.cake-filter-full{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.cake-filter-item{
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.cake-filter-text{
+    text-align: center;
+}
+
+.cake-filter-text h4{
+    font-size: 18px;
+    color: #3e606b;
+    font-family: "Playfair Display", serif;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    transition: all 400ms linear 0s;
+    cursor: pointer;
+}
+
+
+@media (max-width: 991px) {
+    .cake-filter-item{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 767px) {
+    .cake-filter-item{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 575px) {
+    .cake-filter-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .list-style li{
+        margin-right: 15px;
+    }
+
+
+}
+
