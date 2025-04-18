@@ -75,45 +75,21 @@ $('.owl-carousel').owlCarousel({
 
 
 
-var defaultSelector = $(".cake-filter ul li.active").attr("data-filter");
-if (defaultSelector) {
-    $(".grid_portfolio_area").isotope({
-        filter: defaultSelector,
-        animationOptions: {
-            duration: 450,
-            easing: "linear",
-            queue: false,
-        }
-    });
-}
 
-portfolio_isotope();
+var $galleryContainer = $('.gallery').isotope({
+  itemSelector: '.item',
+    layoutMode: 'fitRows'
+})
 
+$('.button-group .button').on('click', function(){
+  $('.button-group .button').removeClass('active');
+  $(this).addClass('active');
 
-
-
-function portfolio_isotope(){
-  if ( $('.cake-filter ul li').length ){
-      // Add isotope click function
-      $(".cake-filter ul li").on('click',function(){
-          $(".cake-filter ul li").removeClass("active");
-          $(this).addClass("active");
-
-          var selector = $(this).attr("data-filter");
-          $(".grid_portfolio_area").isotope({
-              filter: selector,
-              animationOptions: {
-                  duration: 450,
-                  easing: "linear",
-                  queue: false,
-              }
-          });
-          return false;
-      });
-  }
-}
-
-portfolio_isotope();
+  var value = $(this).attr('data-filter');
+  $galleryContainer.isotope({
+    filter: value 
+  })
+})
 
 
 
