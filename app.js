@@ -31,10 +31,10 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
 
-    autoplay: {
-        delay: 8000,
-        disableOnInteraction: false,
-      },
+    // autoplay: {
+    //     delay: 8000,
+    //     disableOnInteraction: false,
+    //   },
     
     pagination: {
       el: ".swiper-pagination",
@@ -71,6 +71,10 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
+
+
+
+
 var defaultSelector = $(".cake-filter ul li.active").attr("data-filter");
 if (defaultSelector) {
     $(".grid_portfolio_area").isotope({
@@ -82,7 +86,6 @@ if (defaultSelector) {
         }
     });
 }
-
 
 portfolio_isotope();
 
@@ -114,25 +117,10 @@ portfolio_isotope();
 
 
 
-// var count = 1;
-// var max = 11;
-
-// function startCounter() {
-//   var countElement = document.getElementById('count');
-//   var interval = setInterval(function() {
-//     countElement.innerText = count;
-//     count++;
-//     if (count > max) {
-//       clearInterval(interval);
-//     }
-//   }, 300); // Delay ko slow ya fast karne ke liye number change karo
-// }
-
-// startCounter()
 
 
 
-function animateCount(id, number, duration = 4000) {
+function animateCount(id, number, duration = 5000) {
   $(id).animateNumber({ number: number }, duration);
 }
 
@@ -144,8 +132,8 @@ $('#counter').waypoint(function(direction) {
     animateCount('#counter1', 100);
     animateCount('#counter2', 30);
     animateCount('#counter3', 1500);
-    counterStarted = true; // only once
+    counterStarted = true; 
   }
 }, {
-  offset: '100%' // triggers when 90% of the element is visible
+  offset: '100%'
 });
