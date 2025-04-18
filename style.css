@@ -721,10 +721,20 @@
     opacity: 1;
   }
 
-  .item{
-    margin-bottom: 16px;
-  }
-  
+.gallery{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}  
+
+.img-portfolio{
+    width: 100%;
+}
+
+@media screen and (max-width: 400px){
+    .button-group .button{
+        margin-right: 5px;
+    }
+}
 
 
 /* ==================== Menu Section ====================== */
