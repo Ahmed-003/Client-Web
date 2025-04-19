@@ -617,7 +617,7 @@
 
 .item img {
     transition: 0.3s;
-
+    width: 100%;
 }
 
 .item img:hover {
@@ -734,7 +734,7 @@
     
 }
 
-.item{
+.item1{
     padding: 0px 20px !important;
 }
 

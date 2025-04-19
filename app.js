@@ -77,7 +77,7 @@ $('.owl-carousel').owlCarousel({
 
 
 var $galleryContainer = $('.gallery').isotope({
-  itemSelector: '.item',
+  itemSelector: '.item1',
     layoutMode: 'fitRows'
 })
 
