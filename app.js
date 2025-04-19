@@ -1,5 +1,15 @@
 
+// <!-- ============== Elements Fade ============== -->
 
+AOS.init({
+    duration: 1000, 
+    offset: 120,
+    once: true    
+  });
+
+
+
+// <!-- ============== Navbar Fixed On Scroll ============== -->
 
 window.addEventListener("scroll", function () {
     var navbar = document.querySelector(".top-header-2");
@@ -11,6 +21,7 @@ window.addEventListener("scroll", function () {
     }
 });
 
+// <!-- ============== Image slider Carousel ============== -->
 
 
 var swiper = new Swiper(".mySwiper", {
@@ -22,17 +33,20 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
-    // autoplay: {
-    //     delay: 8000,
-    //     disableOnInteraction: false,
-    //   },
-    
+    autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+      },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
   });
+
+
+
+// <!-- ============== Draggable Slider ============== -->
+
 
 
 
@@ -63,38 +77,15 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
-
-
-
-
-
-// var $galleryContainer = $('.gallery').isotope({
-//   itemSelector: '.item1',
-//     layoutMode: 'fitRows'
-// })
-
-// $('.button-group .button').on('click', function(){
-//   $('.button-group .button').removeClass('active');
-//   $(this).addClass('active');
-
-//   var value = $(this).attr('data-filter');
-//   $galleryContainer.isotope({
-//     filter: value 
-//   })
-// })
-
+// <!-- ============== Image Filters  ============== -->
 
 var $galleryContainer = $('.gallery');
-
-// Wait for all images to load first
 $galleryContainer.imagesLoaded(function(){
   $galleryContainer.isotope({
     itemSelector: '.item1',
     layoutMode: 'fitRows'
   });
 });
-
-// Filter buttons
 $('.button-group .button').on('click', function(){
   $('.button-group .button').removeClass('active');
   $(this).addClass('active');
@@ -105,14 +96,12 @@ $('.button-group .button').on('click', function(){
 
 
 
-
+// <!-- ============== Animate Number Counter  ============== -->
 
 function animateCount(id, number, duration = 5000) {
   $(id).animateNumber({ number: number }, duration);
 }
-
 var counterStarted = false;
-
 $('#counter').waypoint(function(direction) {
   if (direction === 'down' && !counterStarted) {
     animateCount('#counter', 11);
