@@ -1,14 +1,6 @@
 
 
 
-AOS.init({
-    duration: 1000, // animation ki speed
-    offset: 120,
-    once: true    // kitni scroll ke baad start ho    // sirf 1 dafa animate kare
-  });
-
-
-
 window.addEventListener("scroll", function () {
     var navbar = document.querySelector(".top-header-2");
 
