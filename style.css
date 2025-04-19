@@ -699,7 +699,7 @@
     background: none;
 }
 
-.button-group:nth-child(4){
+.button-group .button:nth-child(4){
     margin-right: 0;
 }
 
@@ -725,16 +725,26 @@
     width: 100%;
 }
 
-.gallery{
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-}
+
 
 @media screen and (max-width: 400px){
     .button-group .button{
         margin-right: 5px;
     }
     
+}
+
+.item{
+    padding: 0px 20px !important;
+}
+
+.portfolio-text{
+    margin-top: 10px;
+}
+
+.portfolio-text a{
+    text-decoration: none;
+    color: black;
 }
 /* ==================== Menu Section ====================== */
 
