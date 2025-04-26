@@ -49,18 +49,13 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-
 $('.owl-carousel').owlCarousel({
   loop:true,
-  margin: 30,
-  items: 4,
+  margin:10,
   nav:true,
-  autoplay: true,
-  smartSpeed: 1500,
   dots:false,
   navContainerClass: 'cake_feature_slider',
   navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-  responsiveClass: true,
   responsive: {
       0: {
           items: 1,
@@ -112,4 +107,23 @@ $('#counter').waypoint(function(direction) {
   }
 }, {
   offset: '100%'
+});
+
+
+
+const goToTopBtn = document.getElementById("goToTopBtn");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    goToTopBtn.classList.add("show");
+  } else {
+    goToTopBtn.classList.remove("show");
+  }
+});
+
+goToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
